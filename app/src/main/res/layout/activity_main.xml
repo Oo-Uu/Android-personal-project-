@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="91dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageButton
+            android:id="@+id/btn_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+
+            app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+        <TextView
+            android:id="@+id/btn-logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+
+            android:text="방구석 갤러리"
+            android:textSize="20sp"
+
+            />
+
+        <ImageButton
+            android:onClick="onClickedSearch"
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+
+            app:srcCompat="@android:drawable/ic_menu_search" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="100"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="뭉크-노르웨이의 비운의 거장"
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_orange_dark"/>
+
+        <ImageButton
+            android:id="@+id/btn_today"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/monk" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Today's Exhibition"
+            android:textAlignment="center"
+            android:textSize="30sp"
+
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+
+        >
+
+        <ImageButton
+
+            android:id="@+id/btn_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_exhibition"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:onClick="onClickedEx" />
+
+        <ImageButton
+            android:id="@+id/btn_My"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

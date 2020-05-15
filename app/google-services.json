@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "768835145334",
+    "firebase_url": "https://homeexhibition-c467f.firebaseio.com",
+    "project_id": "homeexhibition-c467f",
+    "storage_bucket": "homeexhibition-c467f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768835145334:android:93f0ac363cbe281b299957",
+        "android_client_info": {
+          "package_name": "com.example.homeexhibition"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768835145334-cdlf0odeij6i8i45no230ov2aj3c6jq0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.homeexhibition",
+            "certificate_hash": "f9f5a40acd01b2c933a638136bfa2dc938093c62"
+          }
+        },
+        {
+          "client_id": "768835145334-3981jtu8jd94dh5806hsepam9ite00je.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuhhm-YI0qpCzTw0PsRYNG0HbJQzCOW1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768835145334-3981jtu8jd94dh5806hsepam9ite00je.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
