@@ -7,17 +7,17 @@
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="474dp"
+        android:layout_width="327dp"
+        android:layout_height="515dp"
+        android:layout_gravity="center"
         app:srcCompat="@drawable/monk5" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/_1897"
-        android:textSize="30dp"
         android:textAlignment="center"
-        />
-
+        android:textSize="30dp" />
 
 
 </LinearLayout>

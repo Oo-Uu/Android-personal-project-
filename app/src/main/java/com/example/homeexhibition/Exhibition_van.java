@@ -22,6 +22,13 @@ public class Exhibition_van extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exhibition_van);
 
+        FragmentTransaction transaction= getSupportFragmentManager().beginTransaction();
+        Fragment fragment= new Fragment();
+        transaction.replace(R.id.frame,fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+
+
 
         btn_1=findViewById(R.id.btn_1);
 
@@ -29,7 +36,7 @@ public class Exhibition_van extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FragmentTransaction transaction= getSupportFragmentManager().beginTransaction();
-                Fragment fragment1= new Fragment();
+                Fragment1 fragment1= new Fragment1();
                 transaction.replace(R.id.frame,fragment1);
                 transaction.addToBackStack(null);
                 transaction.commit();

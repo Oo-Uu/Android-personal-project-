@@ -12,7 +12,7 @@ public class Fragment extends androidx.fragment.app.Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View inflate = inflater.inflate(R.layout.fragment1,container, false);
+        View inflate = inflater.inflate(R.layout.fragment,container, false);
         return inflate;
     }
 }
