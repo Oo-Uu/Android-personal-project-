@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent=new Intent(MainActivity.this,Exhibition_van.class);
         startActivity(intent);
     }
+    public void onClickedMy(View v){
+        Intent intent=new Intent(MainActivity.this,My.class);
+        startActivity(intent);
+    }
 
 
 }

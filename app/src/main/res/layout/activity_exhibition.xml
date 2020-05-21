@@ -28,7 +28,8 @@
 
         >
 
-        <ImageButton
+        <Button
+            android:text="home"
             android:onClick="onClickedHome"
 
             android:id="@+id/btn_ExHome"
@@ -37,7 +38,9 @@
             android:layout_margin="20dp"
             android:layout_weight="1" />
 
-        <ImageButton
+        <Button
+
+            android:text="전시회"
             android:id="@+id/btn_exhibition2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -45,7 +48,9 @@
             android:layout_weight="1"
             />
 
-        <ImageButton
+        <Button
+            android:onClick="MY"
+            android:text="my"
             android:id="@+id/btn_ExMy"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

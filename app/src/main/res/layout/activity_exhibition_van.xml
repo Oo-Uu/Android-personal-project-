@@ -14,7 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <ImageButton
+        <Button
+            android:text="나가기"
             android:id="@+id/exit"
             android:layout_width="66dp"
             android:layout_height="41dp"
@@ -33,6 +34,15 @@
         android:layout_alignParentBottom="true"
         >
         <Button
+            android:text="page0"
+            android:id="@+id/btn_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+        </Button>
+        <Button
+            android:text="page1"
             android:id="@+id/btn_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,6 +50,7 @@
             >
         </Button>
         <Button
+            android:text="page2"
             android:id="@+id/btn_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,6 +58,7 @@
             >
         </Button>
         <Button
+            android:text="page3"
             android:id="@+id/btn_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,6 +66,7 @@
             >
         </Button>
         <Button
+            android:text="page4"
             android:id="@+id/btn_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

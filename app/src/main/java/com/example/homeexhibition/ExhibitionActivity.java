@@ -76,6 +76,10 @@ public class ExhibitionActivity extends AppCompatActivity {
         Intent intent=new Intent(getApplicationContext(),Search.class);
         startActivity(intent);
     }
+    public void MY(View v){
+        Intent intent=new Intent(getApplicationContext(),My.class);
+        startActivity(intent);
+    }
 
 
 

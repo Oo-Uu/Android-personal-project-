@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Exhibition_van extends AppCompatActivity {
+    private Button btn_0;
     private Button btn_1;
     private Button btn_2;
     private Button btn_3;
@@ -23,10 +24,23 @@ public class Exhibition_van extends AppCompatActivity {
         setContentView(R.layout.activity_exhibition_van);
 
         FragmentTransaction transaction= getSupportFragmentManager().beginTransaction();
-        Fragment fragment= new Fragment();
+        final Fragment fragment= new Fragment();
         transaction.replace(R.id.frame,fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+
+        btn_0=findViewById(R.id.btn_0);
+
+        btn_0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction transaction= getSupportFragmentManager().beginTransaction();
+                Fragment1 fragment1= new Fragment1();
+                transaction.replace(R.id.frame,fragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
 
 
 
