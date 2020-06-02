@@ -2,6 +2,7 @@ package com.example.homeexhibition;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,12 @@ public class ExhibitionAdapter extends RecyclerView.Adapter<ExhibitionAdapter.Ex
         return (arrayList !=null ? arrayList.size():0);
     }
 
+    public void setfilter(ArrayList<ExInfo> item){
+         arrayList=new ArrayList<>();
+         arrayList.addAll(item);
+         notifyDataSetChanged();
+    }
+
     public class ExhibitionViewHolder extends RecyclerView.ViewHolder {
         ImageView iv_profile;
         TextView tv_painter;
@@ -58,9 +65,21 @@ public class ExhibitionAdapter extends RecyclerView.Adapter<ExhibitionAdapter.Ex
                 @Override
                 public void onClick(View v) {
                     int pos=getAdapterPosition();
+                    Log.e("this","pos");
                     if(pos!=RecyclerView.NO_POSITION){
-                        Intent intent= new Intent(context,Exhibition_van.class);
-                        context.startActivity(intent);
+                        if(pos==0) {
+                            Intent intent = new Intent(context, Exhibition_van.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==1){
+                            Intent intent = new Intent(context, Exhibition_Rou.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==2){
+                            Intent intent = new Intent(context, Exhibition_Ruv.class);
+                            context.startActivity(intent);
+                        }
+
 
                     }
                 }

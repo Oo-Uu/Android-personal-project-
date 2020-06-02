@@ -1,5 +1,6 @@
 package com.example.homeexhibition;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -28,8 +29,9 @@ public class register extends AppCompatActivity {
         et_id=findViewById(R.id.et_id);
         et_pass=findViewById(R.id.et_pass);
         et_name=findViewById(R.id.et_name);
-        et_nick=findViewById(R.id.et_nick);
+        //et_nick=findViewById(R.id.et_nick);
        //회원가입 버튼 클릭 시 수행
+        hideActionBar();
         btn_register=findViewById(R.id.btn_register);
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +39,7 @@ public class register extends AppCompatActivity {
                 String userID=et_id.getText().toString();
                 String userpPass=et_pass.getText().toString();
                 String userName=et_name.getText().toString();
-                String userNick=et_nick.getText().toString();
+               // String userNick=et_nick.getText().toString();
 
                 Response.Listener<String> responseListener=new Response.Listener<String>() {
                     @Override
@@ -59,7 +61,7 @@ public class register extends AppCompatActivity {
                         }
                     }
                 };
-                RegisterRequest registerRequest=new RegisterRequest(userID,userpPass,userName,userNick,responseListener);
+                RegisterRequest registerRequest=new RegisterRequest(userID,userpPass,userName,"",responseListener);
                 RequestQueue queue= Volley.newRequestQueue(register.this);
                 queue.add(registerRequest);
 
@@ -70,5 +72,12 @@ public class register extends AppCompatActivity {
     public void onClickedback(View v){
         Intent intent=new Intent(getApplicationContext(),Login.class);
         startActivity(intent);
+    }
+    public  void hideActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+
+        if (actionBar != null) {
+            actionBar.hide();
+        }
     }
 }

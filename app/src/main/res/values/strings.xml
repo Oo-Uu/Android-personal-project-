@@ -1,9 +1,31 @@
 <resources>
-    <string name="app_name">HomeExhibition</string>
-    <string name="_1896"><![CDATA[<불안>(1896)]]></string>
-    <string name="melancoly_1895"><![CDATA[<Melancoly>(1895)]]></string>
+    <string name="app_name">방구석 갤러리</string>
+    <string name="_1896"><![CDATA[<질투>(1895)]]></string>
+
     <string name="_1895"><![CDATA[<절규>(1895)]]></string>
     <string name="_1897"><![CDATA[<입맞춤>(1897)]]></string>
     <string name="monch_S">“더 이상 사람들이 독서하고 여인이 뜨개질 하는 실내를 그려서는 안되며, 살아서 숨쉬고 느끼고, 고통받고 그리고 사랑하는 사람들이어야 한다.”</string>
     <string name="title"><![CDATA[<뭉크-절규의 화가>]]></string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kiss">그림 속 남녀는 두 개체가 아닌 하나의 덩어리로 보여지며, 무슨 사연인지는 알 수 없으나 서로를 끌어안고 있는 모습에서 너무나도 절박하고 애절한 느낌이 묻어난다.
+    이토록 강렬한 키스 그림을 그려낸 뭉크의 사랑은 어땠을까.
+    지나간 사랑을 더욱 잊지 못하도록 만드는 것은 바로 질투 떄문이다. 질투는 사랑에서 비롯하지만 결국에 질투때문에 사랑은 멀어진다.
+    질투는 사랑에서 비롯하지만 결국에 질투때문에 사랑은 멀어진다. 사람을 가장 우울하게 만드는 것은 질투일까? 아니면 멀어져간 사랑일까?</string>
+    <string name="old_king"><![CDATA[<Old King>]]></string>
+    <string name="la_sainte_face"><![CDATA[<La Sainte Face>]]></string>
+    <string name="thire"><![CDATA[<세 사람이 있는 풍경>]]></string>
+    <string name="vero"><![CDATA[<베로니카>]]></string>
+    <string name="Ruo_s">나는 망망대해의 미미한 먼지, 바람에 씻기 우는 가련한 선원, 어두운 암흑 속에서조차, 성스러운 평화와 빛을 사랑하노라.﻿</string>
+    <string name="Ruv_s">플랑드르의 화가. 바로크 시대 플랑드르 제일의 화가로서 날로 높아가는 명성과 많은 제자들에게 둘러싸여 특유의 화려하고 장대한 예술을 펼쳐나갔다. 현란한 그의 작품은 감각적이고 관능적이며 밝게 타오르는 듯한 색채와 웅대한 구도가 어울려 생기가 넘친다.</string>
+    <string name="ruv1"><![CDATA[<십자가에서 내림>]]></string>
+    <string name="Ruv2"><![CDATA[<시몬과 폐로>]]></string>
+    <string name="Ruv3"><![CDATA[<삼손과 델릴라>]]></string>
+    <string name="Ruv4"><![CDATA[<밀짚모자>]]></string>
+    <string name="ruoweb">루오에 대한 자세한 정보</string>
+    <string name="mjt">뭉크의 사랑은 한마디로 비극이었다. 그의 첫사랑은 매우 자유분방한 사고를 가진 세 살 연상의 유부녀였으며 그로 인해 끊임없는 질투와 의심 그리고 방황을 해야했던 뭉크는 여자를 불신하게 된다.</string>
+    <string name="_1900"><![CDATA[<이별>(1900)]]></string>
+    <string name="met">너무나 가슴아픈 이별때문에 터질듯한 가슴을 움켜진 한 남자와 연기처럼 사라져가는 한 여자의 모습. 이것이 뭉크의 이별이다. 남자의 저 가슴에는 무참히 멀어져가는 사랑의 고통이 남겨졌지만, 떠나는 여자는 어디로 가는지 알 수 없다. 연기처럼 희미하게 멀어져 가는 여인의 모습이 애처롭다.</string>
+    <string name="me">다음은 우리에게 가장 유명한 그림인 뭉크의 절규입니다. 뭉크는 상처와 불안을 나타내는 작가입니다. 절규는 뭉크가 예술가로써 추구하던 바를 가장 잘 표현한 작품입니다. 핏빛의 하늘, 푸른 빛의 도시와 해안도, 그리고 그 자신의 몸도 절규하듯 파도치는 곡선에 묻혀 천천히 소리없이 사라져 갑니다.</string>
 </resources>

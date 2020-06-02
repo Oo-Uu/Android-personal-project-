@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.homeexhibition">
-    <uses-permission android:name="android.permission.INTERNET">
-    </uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".login2"></activity>
+        <activity android:name=".Exhibition_Ruv"></activity>
+        <activity android:name=".Exhibition_Rou" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".login2" />
         <activity android:name=".register" />
         <activity android:name=".Loginresult" />
-        <activity android:name=".My" />
-        <activity android:name=".Search" />
         <activity android:name=".Exhibition_van" />
         <activity android:name=".ExhibitionActivity" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,5 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
     </application>
+
 </manifest>

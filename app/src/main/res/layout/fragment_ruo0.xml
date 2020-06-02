@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <LinearLayout
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:text="Rouault - Henri"
+        android:textAlignment="center"
+        android:textSize="30dp" />
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="480dp"
-        app:srcCompat="@drawable/monk" />
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ruo0" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/_1895"
-        android:textSize="30dp"
-        android:textAlignment="center"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/me"
+        android:text="@string/Ruo_s"
         android:textSize="20dp"
+
         />
-    </LinearLayout>
+
+    <Button
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ruoweb"
+        />
 
 
-
-</ScrollView>
+</LinearLayout>

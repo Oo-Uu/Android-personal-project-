@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
         android:id="@+id/action_home"
         android:enabled="true"
@@ -18,6 +19,14 @@
         android:icon="@drawable/ic_person_black_24dp"
         android:title="My"
         />
+    <item
+        android:id="@+id/action_community"
+        android:enabled="true"
+        android:icon="@drawable/ic_group_black_24dp"
+        android:title="community"
+        />
+
+
 
 
 </menu>

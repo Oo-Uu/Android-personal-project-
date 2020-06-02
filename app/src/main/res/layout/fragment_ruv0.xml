@@ -9,19 +9,21 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Edvard Munch"
+        android:text="Pater Paul Rubens"
         android:textAlignment="center"
         android:textSize="30dp" />
 
     <ImageView
+        android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/monk1" />
+         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/monch_S"
+        android:text="@string/Ruv_s"
         android:textSize="20dp"
+
 
         />
 
@@ -29,7 +31,7 @@
         android:id="@+id/web"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="뭉크에 대한 자세한 정보" />
+        android:text="루벤스에 대해 자세한 정보" />
 
 
 </LinearLayout>

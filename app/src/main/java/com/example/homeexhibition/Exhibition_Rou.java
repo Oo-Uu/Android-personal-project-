@@ -9,7 +9,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Exhibition_van extends AppCompatActivity {
+public class Exhibition_Rou extends AppCompatActivity {
+
     private Button btn_0;
     private Button btn_1;
     private Button btn_2;
@@ -17,17 +18,15 @@ public class Exhibition_van extends AppCompatActivity {
     private Button btn_4;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exhibition_van);
+        setContentView(R.layout.activity_exhibition__rou);
         hideActionBar();
 
 
         FragmentTransaction transaction= getSupportFragmentManager().beginTransaction();
-        final Fragment fragment= new Fragment();
+        final FragmentRuo0 fragment= new FragmentRuo0();
         transaction.replace(R.id.frame,fragment);
         transaction.addToBackStack(null);
         transaction.commit();
@@ -38,7 +37,6 @@ public class Exhibition_van extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FragmentTransaction transaction= getSupportFragmentManager().beginTransaction();
-                Fragment fragment= new Fragment();
                 transaction.replace(R.id.frame,fragment);
                 transaction.addToBackStack(null);
                 transaction.commit();
@@ -53,7 +51,7 @@ public class Exhibition_van extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FragmentTransaction transaction= getSupportFragmentManager().beginTransaction();
-                Fragment1 fragment1= new Fragment1();
+                FragmentRuo1 fragment1= new FragmentRuo1();
                 transaction.replace(R.id.frame,fragment1);
                 transaction.addToBackStack(null);
                 transaction.commit();
@@ -65,7 +63,7 @@ public class Exhibition_van extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FragmentTransaction transaction= getSupportFragmentManager().beginTransaction();
-                Fragment2 fragment2= new Fragment2();
+                FragmentRuo2 fragment2= new FragmentRuo2();
                 transaction.replace(R.id.frame,fragment2);
                 transaction.addToBackStack(null);
                 transaction.commit();
@@ -77,7 +75,7 @@ public class Exhibition_van extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FragmentTransaction transaction= getSupportFragmentManager().beginTransaction();
-                Fragment3 fragment3= new Fragment3();
+                FragmentRuo3 fragment3= new FragmentRuo3();
                 transaction.replace(R.id.frame,fragment3);
                 transaction.addToBackStack(null);
                 transaction.commit();
@@ -89,7 +87,7 @@ public class Exhibition_van extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 FragmentTransaction transaction= getSupportFragmentManager().beginTransaction();
-                Fragment4 fragment4= new Fragment4();
+                FragmentRuo4 fragment4= new FragmentRuo4();
                 transaction.replace(R.id.frame,fragment4);
                 transaction.addToBackStack(null);
                 transaction.commit();

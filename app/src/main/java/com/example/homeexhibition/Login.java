@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.RequestQueue;
@@ -44,6 +45,7 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
     protected void onCreate(@Nullable Bundle savedInstanceState) {//앱이 실행될때 처음 수행
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
+        hideActionBar();
 
         GoogleSignInOptions googleSignInOptions=new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build();
 
@@ -92,9 +94,10 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                                 String userID=jsonObject.getString("userID");
                                 String userPass=jsonObject.getString("userPassword");
                                 Toast.makeText(getApplicationContext(),"로그인에 성공하였습니다",Toast.LENGTH_SHORT).show();
-                                Intent intent= new Intent(Login.this,MainActivity.class);
+                                Intent intent= new Intent(Login.this,Main2Activity.class);
                                 intent.putExtra("userID",userID);
                                 intent.putExtra("userPass",userPass);
+
                                 startActivity(intent);
                             }
                             else{//회원등록에 실패한 경우
@@ -156,5 +159,12 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
+    }
+    public  void hideActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+
+        if (actionBar != null) {
+            actionBar.hide();
+        }
     }
 }

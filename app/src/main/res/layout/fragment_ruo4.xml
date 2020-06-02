@@ -10,22 +10,27 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="423dp"
-        app:srcCompat="@drawable/monk3" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/_1900"
-        android:textSize="30dp"
-        android:textAlignment="center"
-        />
+        <ImageView
+            android:layout_width="384dp"
+            android:layout_height="474dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ruo3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/thire"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/met"
-            android:textSize="20dp"/>
+            android:textSize="20sp"
+            />
     </LinearLayout>
+
+
+
 </ScrollView>
