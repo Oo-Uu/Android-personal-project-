@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WriteActivity">
+    <EditText
+        android:id="@+id/write_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/write_contents_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contents"
+        android:background="@null"
+        android:textSize="18sp"
+        />
+
+    <Button
+        android:id="@+id/write_upload_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#5885AC"
+        android:text="업로드"/>
+
+
+
+</LinearLayout>

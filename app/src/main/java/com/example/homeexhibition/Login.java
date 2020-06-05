@@ -2,6 +2,7 @@ package com.example.homeexhibition;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,19 +28,23 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class Login extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+public class Login extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
     private SignInButton btn_google; //구글 로그인 버튼
     private FirebaseAuth auth; //파이어 베이스 인증 객체
     private GoogleApiClient googleApiClient; //구글 API 믈라이언트 객체
     private static final int REQ_SIGN_GOOGLE=100; //구글 로그인 결과 코드
 
-    private EditText et_id,et_pass;
-    private Button btn_login,btn_register;
+    public EditText et_id,et_pass;
+    private Button btn_register;
+
+    private FirebaseAuth mAuth=FirebaseAuth.getInstance();
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {//앱이 실행될때 처음 수행
@@ -67,7 +72,6 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
 
         et_id=findViewById(R.id.et_id);
         et_pass=findViewById(R.id.et_pass);
-        btn_login=findViewById(R.id.btn_login);
         btn_register=findViewById(R.id.btn_register);
 
         btn_register.setOnClickListener(new View.OnClickListener() {
@@ -78,44 +82,37 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
             }
         });
 
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String userID=et_id.getText().toString();
-                String userPass=et_pass.getText().toString();
-
-                Response.Listener<String> responseListener=new Response.Listener<String>() {
+        findViewById(R.id.btn_login).setOnClickListener(this);
+    }
+    @Override
+    protected  void onStart(){
+        super.onStart();
+        FirebaseUser user =mAuth.getCurrentUser();
+        if(user !=null){
+            Toast.makeText(this,"자동 로그인 "+user.getUid(),Toast.LENGTH_SHORT).show();
+        }
+    }
+    @Override
+    public void onClick(View v) {
+        String userID=et_id.getText().toString();
+        String pass=et_pass.getText().toString();
+        mAuth.signInWithEmailAndPassword(userID, pass)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonObject=new JSONObject(response);
-                            boolean success= jsonObject.getBoolean("success");
-                            if(success){// 회원등록에 성공한 경우
-                                String userID=jsonObject.getString("userID");
-                                String userPass=jsonObject.getString("userPassword");
-                                Toast.makeText(getApplicationContext(),"로그인에 성공하였습니다",Toast.LENGTH_SHORT).show();
-                                Intent intent= new Intent(Login.this,Main2Activity.class);
-                                intent.putExtra("userID",userID);
-                                intent.putExtra("userPass",userPass);
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        String userID=et_id.getText().toString();
+                        if (task.isSuccessful()) {
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            Toast.makeText(Login.this, "로그인 성공: "+user.getUid(), Toast.LENGTH_SHORT).show();
 
-                                startActivity(intent);
-                            }
-                            else{//회원등록에 실패한 경우
-                                Toast.makeText(getApplicationContext(),"로그인에 실패하였습니다.",Toast.LENGTH_SHORT).show();
-                                return;
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                            Intent intent= new Intent(Login.this,Main2Activity.class);
+                            intent.putExtra("userID",userID);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(Login.this, "로그인 실패", Toast.LENGTH_SHORT).show();
                         }
                     }
-                };
-                LoginRequest loginRequest=new LoginRequest(userID,userPass,responseListener);
-                RequestQueue queue= Volley.newRequestQueue(Login.this);
-                queue.add(loginRequest);
-
-
-            }
-        });
+                });
 
 
 
@@ -167,4 +164,5 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
             actionBar.hide();
         }
     }
+
 }

@@ -85,7 +85,7 @@ public class ExhibitionActivity extends AppCompatActivity {
         adapter = new ExhibitionAdapter(arrayList, this);
         recyclerview.setAdapter(adapter);//리사이클러뷰에 어댑터 연결
 
-        bottomNavigationView = findViewById(R.id.bottomNavigationView);
+       /* bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -106,6 +106,8 @@ public class ExhibitionActivity extends AppCompatActivity {
         fragmentHome = new Fragment_home();
         fragment_my = new Fragment_my();
         setFrag(1);
+
+        */
 
 
     }
@@ -150,7 +152,7 @@ public class ExhibitionActivity extends AppCompatActivity {
     }
 
 
-    private void setFrag(int n){
+    /*private void setFrag(int n){
         switch (n) {
             case 0:
                 Intent intent = new Intent(this, Main2Activity.class);
@@ -159,7 +161,7 @@ public class ExhibitionActivity extends AppCompatActivity {
             case 1:
                 break;
         }
-    }
+    }*/
 
 }
 

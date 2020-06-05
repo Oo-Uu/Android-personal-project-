@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Exhibition_Ruv"></activity>
+        <activity android:name=".Reply"></activity>
+        <activity android:name=".WriteActivity" />
+        <activity android:name=".Community" />
+        <activity android:name=".Exhibition_Ruv" />
         <activity android:name=".Exhibition_Rou" />
         <activity android:name=".Main2Activity" />
         <activity android:name=".login2" />

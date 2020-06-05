@@ -40,6 +40,9 @@ public class Main2Activity extends AppCompatActivity {
                     case R.id.action_my:
                         setFrag(2);
                         break;
+                    case R.id.action_community:
+                        setFrag(3);
+                        break;
                 }
                 return true;
             }
@@ -53,19 +56,31 @@ public class Main2Activity extends AppCompatActivity {
     private void setFrag(int n){
         fm= getSupportFragmentManager();
         ft=fm.beginTransaction();
+        Intent intent= getIntent();
+        String userID= intent.getStringExtra("userID");
         switch (n){
             case 0:
                 ft.replace(R.id.main_frame,fragmentHome);
                 ft.commit();
                 break;
             case 1:
-                Intent intent= new Intent(this,ExhibitionActivity.class);
-                startActivity(intent);
+                Intent intent2= new Intent(this,ExhibitionActivity.class);
+                startActivity(intent2);
                 break;
             case 2:
                 ft.replace(R.id.main_frame,fragment_my);
                 ft.commit();
+                Bundle bundle=new Bundle();
+                bundle.putString("userID",userID);
+                fragment_my.setArguments(bundle);
                 break;
+            case 3:
+                Intent intent3= new Intent(this,Community.class);
+                intent3.putExtra("userID",userID);
+                startActivity(intent3);
+                break;
+
+
         }
 
     }
