@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.SearchView;
@@ -44,6 +45,8 @@ public class ExhibitionActivity extends AppCompatActivity {
     private Fragment_my fragment_my;
 
     private SearchView searchView;
+
+    private Button button;
 
 
 
@@ -85,29 +88,17 @@ public class ExhibitionActivity extends AppCompatActivity {
         adapter = new ExhibitionAdapter(arrayList, this);
         recyclerview.setAdapter(adapter);//리사이클러뷰에 어댑터 연결
 
-       /* bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        button=findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.action_home:
-                        setFrag(0);
-                        break;
-                    case R.id.action_ex:
-                        setFrag(1);
-                        break;
-                    case R.id.action_my:
-                        setFrag(2);
-                        break;
-                }
-                return true;
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),Main2Activity.class);
+                startActivity(intent);
             }
         });
-        fragmentHome = new Fragment_home();
-        fragment_my = new Fragment_my();
-        setFrag(1);
 
-        */
+
+
 
 
     }
@@ -152,16 +143,6 @@ public class ExhibitionActivity extends AppCompatActivity {
     }
 
 
-    /*private void setFrag(int n){
-        switch (n) {
-            case 0:
-                Intent intent = new Intent(this, Main2Activity.class);
-                startActivity(intent);
-                break;
-            case 1:
-                break;
-        }
-    }*/
 
 }
 

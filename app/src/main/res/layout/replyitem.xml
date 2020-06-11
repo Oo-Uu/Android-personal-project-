@@ -19,7 +19,7 @@
         <TextView
             android:id="@+id/item_Nick_text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="43dp"
             android:layout_margin="8dp"
             android:drawableStart="@drawable/ic_person_black_24dp"
             android:gravity="center"
@@ -27,11 +27,12 @@
             android:textSize="12sp" />
 
         <TextView
-            android:layout_width="295dp"
+            android:id="@+id/item_Reply_text"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="reply"
-            android:textSize="10sp"/>
+            android:textSize="10sp" />
 
     </LinearLayout>
 

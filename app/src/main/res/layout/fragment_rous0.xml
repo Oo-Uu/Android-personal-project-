@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pater Paul Rubens"
+        android:text=" Rousseau, Henri"
         android:textAlignment="center"
         android:textSize="30dp" />
 
@@ -17,8 +17,7 @@
         android:id="@+id/image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scaleType="fitCenter"
-         />
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,7 +31,7 @@
         android:id="@+id/web"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="루벤스에 대해 자세한 정보" />
+        android:text="루소에 대해 자세한 정보" />
 
 
 </LinearLayout>

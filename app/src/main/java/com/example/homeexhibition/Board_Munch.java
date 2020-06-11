@@ -1,13 +1,5 @@
 package com.example.homeexhibition;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -15,26 +7,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentChange;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
-import org.w3c.dom.Document;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import static com.example.homeexhibition.R.id.recyclerView;
+public class Board_Munch extends AppCompatActivity implements View.OnClickListener {
 
-public class Community extends AppCompatActivity implements View.OnClickListener {
     private FirebaseFirestore mStore=FirebaseFirestore.getInstance();
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -43,15 +35,14 @@ public class Community extends AppCompatActivity implements View.OnClickListener
     private List<Board> mBoardList;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-         super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_commmnity);
-
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_board__munch);
         hideActionBar();
 
-         recyclerView=findViewById(R.id.recyclerView);
-         recyclerView.setHasFixedSize(true); //리사이클러뷰 기존 성능 강화
-         layoutManager = new LinearLayoutManager(this);
-         recyclerView.setLayoutManager(layoutManager);
+        recyclerView=findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true); //리사이클러뷰 기존 성능 강화
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
 
 
 
@@ -63,33 +54,33 @@ public class Community extends AppCompatActivity implements View.OnClickListener
     protected void onStart() {
         super.onStart();
         mBoardList=new ArrayList<>();
-        mStore.collection(FirebaseId.board)
+        mStore.collection(FirebaseId.board0)
                 .orderBy(FirebaseId.timeStamp, Query.Direction.DESCENDING)
-               .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                   @Override
-                   public void onEvent(@javax.annotation.Nullable QuerySnapshot queryDocumentSnapshots, @javax.annotation.Nullable FirebaseFirestoreException e) {
-                       if(queryDocumentSnapshots != null){
-                           mBoardList.clear();
-                           for(DocumentSnapshot snap: queryDocumentSnapshots.getDocuments()){
-                               Map<String, Object> shot=snap.getData();
-                               String documentId= String.valueOf(shot.get(FirebaseId.documentId));
-                               String title= String.valueOf(shot.get(FirebaseId.title));
-                               String contents=String.valueOf(shot.get(FirebaseId.contents));
-                               String nick=String.valueOf(shot.get(FirebaseId.nick));
-                               String time=String.valueOf(shot.get(FirebaseId.timeStamp));
-                               Board data=new Board(documentId,title,contents,nick,time);
-                               mBoardList.add(data);
-                           }
-                           mAdapter= new MainAdapter(mBoardList);
-                           recyclerView.setAdapter(mAdapter);
-                       }
-                   }
-               });
+                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@javax.annotation.Nullable QuerySnapshot queryDocumentSnapshots, @javax.annotation.Nullable FirebaseFirestoreException e) {
+                        if(queryDocumentSnapshots != null){
+                            mBoardList.clear();
+                            for(DocumentSnapshot snap: queryDocumentSnapshots.getDocuments()){
+                                Map<String, Object> shot=snap.getData();
+                                String documentId= String.valueOf(shot.get(FirebaseId.documentId));
+                                String title= String.valueOf(shot.get(FirebaseId.title));
+                                String contents=String.valueOf(shot.get(FirebaseId.contents));
+                                String nick=String.valueOf(shot.get(FirebaseId.nick));
+                                String time=String.valueOf(shot.get(FirebaseId.timeStamp));
+                                Board data=new Board(documentId,title,contents,nick,time);
+                                mBoardList.add(data);
+                            }
+                            mAdapter= new MainAdapter(mBoardList);
+                            recyclerView.setAdapter(mAdapter);
+                        }
+                    }
+                });
     }
 
     @Override
     public void onClick(View v) {
-        Intent intent2=new Intent(this,WriteActivity.class);
+        Intent intent2=new Intent(this,B0WriteActivity.class);
         startActivity(intent2);
     }
 
@@ -156,7 +147,6 @@ public class Community extends AppCompatActivity implements View.OnClickListener
 
         }
     }
-
     public  void hideActionBar() {
         ActionBar actionBar = getSupportActionBar();
 
@@ -164,7 +154,11 @@ public class Community extends AppCompatActivity implements View.OnClickListener
             actionBar.hide();
         }
     }
-}
+
+
+
+
+    }
 
 
 

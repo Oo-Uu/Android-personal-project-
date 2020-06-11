@@ -51,14 +51,23 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="댓글을 입력하세요"
-        android:textSize="12sp"/>
+        <EditText
+            android:id="@+id/et_reply"
+            android:layout_width="352dp"
+            android:layout_height="match_parent"
+            android:hint="댓글을 입력하세요"
+            android:textSize="12sp" />
+        <Button
+            android:id="@+id/btn_enterText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="입력"
+            android:textSize="10sp"
+            />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

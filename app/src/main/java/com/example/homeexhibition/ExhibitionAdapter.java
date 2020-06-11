@@ -79,6 +79,51 @@ public class ExhibitionAdapter extends RecyclerView.Adapter<ExhibitionAdapter.Ex
                             Intent intent = new Intent(context, Exhibition_Ruv.class);
                             context.startActivity(intent);
                         }
+                        if(pos==3){
+                            Intent intent = new Intent(context, Exhibition_Rous.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==4){
+                            Intent intent = new Intent(context, Exhibiton_Mat.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==5){
+                            Intent intent = new Intent(context, Exhibiton_Man.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==6){
+                            Intent intent = new Intent(context, Exhibiton_Go.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==7){
+                            Intent intent = new Intent(context, Exhibiton_Da.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==8){
+                            Intent intent = new Intent(context, Exhibition_Ren.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==9){
+                            Intent intent = new Intent(context, Exhibition_Pi.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==10){
+                            Intent intent = new Intent(context, Exhibiton_Ego.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==11){
+                            Intent intent = new Intent(context, Exhibiton_Mo.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==12){
+                            Intent intent = new Intent(context, Exhibiton_Raf.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==13){
+                            Intent intent = new Intent(context, Exhibiton_Dega.class);
+                            context.startActivity(intent);
+                        }
+
 
 
                     }
