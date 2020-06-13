@@ -19,12 +19,6 @@
         android:icon="@drawable/ic_person_black_24dp"
         android:title="My"
         />
-    <item
-        android:id="@+id/action_community"
-        android:enabled="true"
-        android:icon="@drawable/ic_group_black_24dp"
-        android:title="community"
-        />
 
 
 

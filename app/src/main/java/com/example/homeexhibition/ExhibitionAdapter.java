@@ -67,26 +67,27 @@ public class ExhibitionAdapter extends RecyclerView.Adapter<ExhibitionAdapter.Ex
                     int pos=getAdapterPosition();
                     Log.e("this","pos");
                     if(pos!=RecyclerView.NO_POSITION){
-                        if(pos==0) {
-                            Intent intent = new Intent(context, Exhibition_van.class);
-                            context.startActivity(intent);
-                        }
-                        if(pos==1){
-                            Intent intent = new Intent(context, Exhibition_Rou.class);
-                            context.startActivity(intent);
-                        }
-                        if(pos==2){
-                            Intent intent = new Intent(context, Exhibition_Ruv.class);
-                            context.startActivity(intent);
-                        }
-                        if(pos==3){
-                            Intent intent = new Intent(context, Exhibition_Rous.class);
-                            context.startActivity(intent);
-                        }
-                        if(pos==4){
+                        if(pos==0){
                             Intent intent = new Intent(context, Exhibiton_Mat.class);
                             context.startActivity(intent);
                         }
+                        if(pos==1) {
+                            Intent intent = new Intent(context, Exhibition_van.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==2){
+                            Intent intent = new Intent(context, Exhibition_Rou.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==3){
+                            Intent intent = new Intent(context, Exhibition_Ruv.class);
+                            context.startActivity(intent);
+                        }
+                        if(pos==4){
+                            Intent intent = new Intent(context, Exhibition_Rous.class);
+                            context.startActivity(intent);
+                        }
+
                         if(pos==5){
                             Intent intent = new Intent(context, Exhibiton_Man.class);
                             context.startActivity(intent);
@@ -123,9 +124,6 @@ public class ExhibitionAdapter extends RecyclerView.Adapter<ExhibitionAdapter.Ex
                             Intent intent = new Intent(context, Exhibiton_Dega.class);
                             context.startActivity(intent);
                         }
-
-
-
                     }
                 }
             });

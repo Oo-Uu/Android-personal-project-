@@ -6,13 +6,17 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_ex"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_ex_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".B0WriteActivity"></activity>
+        <activity android:name=".B2WriteActivity"></activity>
+        <activity android:name=".Board_Mat" />
+        <activity android:name=".B1WriteActivity" />
+        <activity android:name=".Board_Ruo" />
+        <activity android:name=".B0WriteActivity" />
         <activity android:name=".Board_Munch" />
         <activity android:name=".Exhibition_Pi" />
         <activity android:name=".Exhibition_Ren" />
@@ -25,9 +29,6 @@
         <activity android:name=".Exhibiton_Man" />
         <activity android:name=".Exhibiton_Mat" />
         <activity android:name=".Exhibition_Rous" />
-        <activity android:name=".Reply" />
-        <activity android:name=".WriteActivity" />
-        <activity android:name=".Community" />
         <activity android:name=".Exhibition_Ruv" />
         <activity android:name=".Exhibition_Rou" />
         <activity android:name=".Main2Activity" />

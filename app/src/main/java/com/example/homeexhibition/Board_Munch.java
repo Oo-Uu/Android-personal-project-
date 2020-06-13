@@ -127,21 +127,7 @@ public class Board_Munch extends AppCompatActivity implements View.OnClickListen
                 mContentsTextView= itemView.findViewById(R.id.item_contents_text);
                 mTimeTextView=itemView.findViewById(R.id.item_time_text);
 
-                itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        int pos=getAdapterPosition();
-                        if(pos!=RecyclerView.NO_POSITION){
-                            Intent intent=new Intent(getApplicationContext(),Reply.class);
-                            intent.putExtra("Title",mTitleTextView.getText().toString());
-                            intent.putExtra("Nick",mNameTextView.getText().toString());
-                            intent.putExtra("Contents",mContentsTextView.getText().toString());
-                            intent.putExtra("Time",mTimeTextView.getText().toString());
-                            startActivity(intent);
-                        }
 
-                    }
-                });
             }
 
 

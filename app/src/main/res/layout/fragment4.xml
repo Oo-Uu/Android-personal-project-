@@ -11,8 +11,9 @@
         android:orientation="vertical">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="480dp"
+        android:layout_width="384dp"
+        android:layout_height="474dp"
+        android:layout_gravity="center"
         app:srcCompat="@drawable/monk" />
     <TextView
         android:layout_width="match_parent"

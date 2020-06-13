@@ -16,6 +16,7 @@ public class Exhibition_Rou extends AppCompatActivity {
     private Button btn_2;
     private Button btn_3;
     private Button btn_4;
+    private Button btn_5;
 
 
     @Override
@@ -93,6 +94,18 @@ public class Exhibition_Rou extends AppCompatActivity {
                 transaction.commit();
             }
         });
+        btn_5=findViewById(R.id.btn_5);
+
+        btn_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getApplicationContext(),Board_Ruo.class);
+                startActivity(intent);
+            }
+        });
+
+
+
     }
     public void onClickExit(View v){
         Intent intent=new Intent(getApplicationContext(),ExhibitionActivity.class);

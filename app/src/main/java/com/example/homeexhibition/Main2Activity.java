@@ -40,9 +40,6 @@ public class Main2Activity extends AppCompatActivity {
                     case R.id.action_my:
                         setFrag(2);
                         break;
-                    case R.id.action_community:
-                        setFrag(3);
-                        break;
                 }
                 return true;
             }
@@ -74,12 +71,6 @@ public class Main2Activity extends AppCompatActivity {
                 bundle.putString("userID",userID);
                 fragment_my.setArguments(bundle);
                 break;
-            case 3:
-                Intent intent3= new Intent(this,Community.class);
-                intent3.putExtra("userID",userID);
-                startActivity(intent3);
-                break;
-
 
         }
 

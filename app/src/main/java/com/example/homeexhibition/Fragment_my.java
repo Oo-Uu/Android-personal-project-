@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,12 +31,37 @@ public class Fragment_my extends Fragment {
     private FirebaseFirestore mStore=FirebaseFirestore.getInstance();
 
     private Button btn_logout;
+    private Button btn_del;
 
     private String nick;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my, container, false);
+
+
+        btn_logout=view.findViewById(R.id.btn_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.signOut();
+                Toast.makeText(getContext(),"로그아웃 되었습니다.",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getContext(),Login.class);
+                startActivity(intent);
+            }
+        });
+        btn_del=view.findViewById(R.id.btn_del);
+        btn_del.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mAuth.getCurrentUser().delete();
+                Toast.makeText(getContext(),"회원탈퇴 되었습니다.",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getContext(),Login.class);
+                startActivity(intent);
+
+            }
+        });
+
 
         imageview = view.findViewById(R.id.imageView);
         imageview.setOnClickListener(new View.OnClickListener() {
@@ -47,10 +73,6 @@ public class Fragment_my extends Fragment {
             }
         });
         tv_nick=view.findViewById(R.id.tv_nick);
-        /*Bundle bundle= getArguments();
-        String nick=bundle.getString("userID");
-        tv_nick.setText(nick);
-        */
         if(mAuth.getCurrentUser() != null){
             mStore.collection(FirebaseId.user).document(mAuth.getCurrentUser().getUid())
                     .get()
@@ -65,15 +87,6 @@ public class Fragment_my extends Fragment {
         }
         tv_nick.setText(nick);
         return view;
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if (requestCode == GET_GALLERY_IMAGE && data != null && data.getData() != null) {
-
-            Uri selectedImageUri = data.getData();
-            imageview.setImageURI(selectedImageUri);
-        }
     }
 
 }

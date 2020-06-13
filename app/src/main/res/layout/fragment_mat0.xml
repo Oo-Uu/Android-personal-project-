@@ -21,11 +21,19 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Ruv_s"
+        android:text="@string/Ma_s"
+        android:textAlignment="center"
         android:textSize="20dp"
-
-
         />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What I dream of is an art of balance"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        />
+
+
 
     <Button
         android:id="@+id/web"
