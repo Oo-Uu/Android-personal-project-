@@ -28,7 +28,7 @@
         android:id="@+id/write_upload_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#5885AC"
+        android:background="@color/fui_buttonShadow"
         android:text="업로드"/>
 
 

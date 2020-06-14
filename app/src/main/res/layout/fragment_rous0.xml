@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Rous_s"
         android:textSize="15dp"
+        android:textAlignment="center"
 
 
         />
