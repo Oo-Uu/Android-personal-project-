@@ -139,10 +139,14 @@ public class Login extends AppCompatActivity implements GoogleApiClient.OnConnec
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){// 로그인에 성공할 경우
                             Toast.makeText(getApplicationContext(),"로그인 성공",Toast.LENGTH_SHORT).show();
-                            Intent intent= new Intent(getApplicationContext(),Loginresult.class );
+                           /* Intent intent= new Intent(getApplicationContext(),Loginresult.class );
                             intent.putExtra("nickname",account.getDisplayName());
                             intent.putExtra("photUrl",String.valueOf(account.getPhotoUrl()));// String.valueOf:특정 자료형 String으로
+                            */
+                            Intent intent= new Intent(Login.this,Main2Activity.class);
                             startActivity(intent);
+
+
                         }
                         else{//로그인 실패
                             Toast.makeText(getApplicationContext(),"로그인 실패",Toast.LENGTH_SHORT).show();

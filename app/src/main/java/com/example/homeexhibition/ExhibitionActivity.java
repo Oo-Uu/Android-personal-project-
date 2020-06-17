@@ -35,14 +35,7 @@ public class ExhibitionActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager layoutManager;
     private ArrayList<ExInfo> arrayList;
     private FirebaseDatabase database;
-    private DatabaseReference databaseReference;
-
-    private BottomNavigationView bottomNavigationView;
-    private FragmentManager fm;
-    private FragmentTransaction ft;
-    private Fragment_home fragmentHome;
-    private Fragment_exhibition fragment_exhibition;
-    private Fragment_my fragment_my;
+    private DatabaseReference databaseReference;;
 
     private SearchView searchView;
 
@@ -130,7 +123,7 @@ public class ExhibitionActivity extends AppCompatActivity {
     }
 
 
-    private ArrayList<ExInfo> filter(ArrayList<ExInfo> ar,String query) { //Arraylist에 검색ㅎ서 나오는거 넣어주고 return
+    private ArrayList<ExInfo> filter(ArrayList<ExInfo> ar,String query) { //Arraylist에 검색해서 나오는거 넣어주고 return
         query=query.toLowerCase();
         final ArrayList<ExInfo> filterModeList= new ArrayList<>();
         for(ExInfo info:ar){

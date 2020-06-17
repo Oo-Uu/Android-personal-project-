@@ -17,7 +17,6 @@ public class Main2Activity extends AppCompatActivity {
     private FragmentManager fm;
     private FragmentTransaction ft;
     private Fragment_home fragmentHome;
-    private Fragment_exhibition fragment_exhibition;
     private Fragment_my fragment_my;
 
     @Override
@@ -45,7 +44,6 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
         fragmentHome=new Fragment_home();
-        fragment_exhibition=new Fragment_exhibition();
         fragment_my=new Fragment_my();
         setFrag(0);
     }
